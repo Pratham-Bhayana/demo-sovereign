@@ -5,12 +5,42 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["Montserrat", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        primary: {
+          '50': '#eef2fa',
+          '100': '#d9e2f5',
+          '200': '#bccae9',
+          '300': '#95a8da',
+          '400': '#7387ca',
+          '500': '#5d6dbc',
+          '600': '#4c59af',
+          '700': '#404b9f',
+          '800': '#38408e',
+          '900': '#303772',
+          '950': '#1f2447',
+        },
+        accent: {
+          '50': '#fefaec',
+          '100': '#fef5c7',
+          '200': '#feec8f',
+          '300': '#fddb57',
+          '400': '#fcc92d',
+          '500': '#f9b411',
+          '600': '#db8909',
+          '700': '#b55e0c',
+          '800': '#934812',
+          '900': '#793b14',
+          '950': '#441d08',
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
