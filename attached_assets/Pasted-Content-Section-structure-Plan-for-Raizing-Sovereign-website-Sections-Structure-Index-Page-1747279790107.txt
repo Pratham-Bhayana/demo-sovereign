@@ -1,0 +1,308 @@
+Content & Section structure Plan 
+for Raizing Sovereign website 
+
+Sections Structure 
+
+ 
+
+Index Page: 
+
+Header 
+
+Hero section 
+
+Our programs 
+
+Schedule a consultation  
+
+Comprehensive services 
+
+Partners 
+
+Testimonials  
+
+Contact form  
+
+Footer 
+
+ 
+
+Section Breakdown: 
+ 
+
+Header: Left aligned Logo – center aligned Navigation links – right aligned CTA button  
+
+Navigation links: Home, About, Programs, Calculator 
+
+CTA button: Talk to our Experts – redirects to schedule page 
+ 
+
+Hero Section: 
+
+Center aligned tittle and short description 
+
+CTA button: Start your journey – redirects to program page 
+ 
+
+Citizenship & Residency program:  
+
+Preview of cards with images in background divided by the continents 
+
+Mentioning countries name as points 
+
+Explore more button which redirects to program page 
+ 
+
+Schedule a call option:  
+
+Redirects to page  
+
+An option to choose date and time 
+ 
+
+Comprehensive services: 
+
+Shows our services in simple sorted way 
+
+Citizenship by investment 
+
+Residency program 
+
+Investment advisory 
+
+Additional Services  
+
+Preview with Images and cards 
+ 
+
+Partners slideshow 
+ 
+
+Testimonial -customer's feedback 
+
+ 
+
+Contact form 
+
+ 
+
+Footer: 
+
+Logo 
+
+Address 
+
+Navigation links 
+
+Raizing Global link 
+
+Social links 
+
+Download/view brochure link 
+
+ 
+
+ 
+	2. About Section: 
+
+Company introduction 
+
+Our core values in points 
+
+Vision and Mission 
+
+Partners 
+
+Where we stand in the Market 
+
+Offices 
+
+Company’s Brochure 
+
+ 
+
+3.  Program Section: 
+
+Short description about we offer 
+
+Preview cards according to nation 
+
+Each card redirects to page  
+
+Book a consultant for free -button 
+
+4. Calculator: 
+
+Select Program option within the calculator 
+
+Preview with investment amount filter option 
+
+Explore program option 
+
+Request a call button 
+
+ 
+
+Content for the website  
+(SEO Friendly) 
+
+ 
+	1. Hero Section: 
+
+Title:  
+“Elevate Your Global Freedom | Raizing Sovereign” 
+
+Description/Subtitle: “Unlock global mobility with Raizing Sovereign. Secure second citizenship or permanent residency through trusted investment migration programs.” 
+
+2.  Our Programs: 
+
+Title:  
+"Top Citizenship & Residency program” 
+
+Emphasizes key SEO terms like "citizenship by investment" and "residency by investment" 
+
+Comprehensive Services 
+
+ 
+Citizenship Program  
+
+Title: 
+Secure a second passport through a fast, legally compliant process. Raizing Sovereign offers access to top government-approved Citizenship by Investment programs, allowing you to gain global mobility, financial freedom, and a secure future through strategic investments in real estate, national funds, or businesses. 
+
+ 
+
+Key SEO Phrases Included: 
+
+“Citizenship by Investment” 
+
+“Second passport” 
+
+“Government-approved programs” 
+
+“Global mobility” 
+
+“Strategic investments” 
+
+ 
+
+ 
+
+Points:  
+
+Comprehensive Due Diligence & Eligibility Assessment 
+
+End-to-End Documentation Support 
+
+Personalized Investment Guidance 
+
+Application Tracking & Real-Time Updates 
+
+Seamless Passport & Citizenship Delivery 
+
+ 
+
+Residency by Investment 
+
+Title: 
+	Gain legal residency in top-tier countries through strategic investments in real estate, business ventures, or government-approved financial contributions. Raizing Sovereign provides tailored guidance throughout the entire process, from program selection to permanent residency — and even future citizenship planning. 
+
+Points: 
+
+Tailored Program Selection 
+
+Expert Real Estate Investment Guidance 
+
+Business Establishment & Planning Support 
+
+Residency Application & Renewal Management 
+
+Citizenship Planning & Long-Term Strategy 
+
+ 
+
+Investment Advisory 
+
+Title: 
+Receive expert, personalized guidance on selecting and managing investments that support your immigration pathway and long-term financial success. At Raizing Sovereign, we help you identify secure, high-return opportunities—whether in real estate, business, or government funds—aligned with residency or citizenship requirements. 
+
+Customized Investment Portfolio Design 
+
+Comprehensive Risk Assessment & Mitigation 
+
+Real Estate Market Analysis & Property Selection 
+
+Expert Advice on Government Fund Contributions 
+
+Ongoing Investment Management & Support 
+
+Additional Services 
+
+      Title: 
+We offer comprehensive end-to-end support to ensure a seamless transition to your new country of residence or citizenship. From relocation logistics to integration assistance, Raizing Sovereign takes care of every detail of your global mobility journey — so you can focus on building your new life with confidence. 
+
+Points: 
+
+Tax Planning & Financial Optimization 
+
+Family Relocation & Settlement Assistance 
+
+Education & Healthcare Guidance 
+
+Language & Cultural Integration Support 
+
+Business Networking & Strategic Introductions 
+ 
+ 
+
+Citizenship & Residency program 
+
+ 
+		Caribbean Citizenship by Investment Programs: 
+		Acquire second citizenship in beautiful Caribbean nations through fast, 		secure investment routes. Enjoy visa-free travel, tax advantages, and 			minimal or no residency requirements — all with streamlined processing and 		  lifetime citizenship benefits. 
+
+ 
+
+St. Kitts & Nevis	 
+
+Grenada 
+
+Dominica 
+
+Antigua & Barbuda 
+
+Vanuatu  
+
+ 
+
+European Residency & Citizenship by Investment 
+	Unlock access to the European Union through strategic investment 		programs in select EU member states. Enjoy visa-free travel within the 	Schengen Zone, high-quality living standards, and pathways to permanent 	         residency or citizenship. 
+
+ 
+
+Croatia 
+
+Bosnia & Herzegovina 
+
+Malta 
+
+Ukraine 
+
+Hungary 
+
+Greece 
+
+USA & Canada Immigration Programs 
+	 Gain access to North America through trusted investment and business 		immigration programs. These pathways offer opportunities for 			permanent residency, citizenship, and access to world-class economies, 	education, and quality of life. 
+
+U.S. EB-5 Investor Visa 
+
+Canada Start-Up Visa 
+
+U.S. E-2 Treaty Investor Visa 
+
+Canada Express Entry 
+
+ 
+
+*Rest of the elements will use from the company’s brochure* 
+ 
