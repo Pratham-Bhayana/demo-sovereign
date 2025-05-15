@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -29,38 +30,89 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
     };
   }, [isOpen, onClose]);
 
+  const menuItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Programs", path: "/programs" },
+    { label: "Calculator", path: "/calculator" },
+  ];
+
+  const slideInVariants = {
+    closed: { opacity: 0, y: -10 },
+    open: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    }),
+    exit: { opacity: 0, y: -10 },
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div 
-          className="md:hidden bg-white shadow-lg absolute w-full"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="flex flex-col px-4 pt-2 pb-4">
-            <Link href="/">
-              <a className="py-3 border-b border-neutral-100 font-medium" onClick={onClose}>Home</a>
-            </Link>
-            <Link href="/about">
-              <a className="py-3 border-b border-neutral-100 font-medium" onClick={onClose}>About</a>
-            </Link>
-            <Link href="/programs">
-              <a className="py-3 border-b border-neutral-100 font-medium" onClick={onClose}>Programs</a>
-            </Link>
-            <Link href="/calculator">
-              <a className="py-3 border-b border-neutral-100 font-medium" onClick={onClose}>Calculator</a>
-            </Link>
-            <a 
-              href="#schedule" 
-              className="mt-4 text-center px-5 py-3 bg-primary text-white font-medium rounded-lg"
-              onClick={onClose}
-            >
-              Talk to our Experts
-            </a>
-          </div>
-        </motion.div>
+        <>
+          {/* Backdrop */}
+          <motion.div
+            className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+
+          {/* Menu */}
+          <motion.div 
+            className="md:hidden bg-white shadow-xl fixed top-[60px] left-0 right-0 z-50 max-h-[calc(100vh-60px)] overflow-auto"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="flex flex-col p-6">
+              {menuItems.map((item, index) => (
+                <motion.div 
+                  key={item.path}
+                  custom={index}
+                  variants={slideInVariants}
+                  initial="closed"
+                  animate="open"
+                  exit="exit"
+                  className="mb-3"
+                >
+                  <Link href={item.path}>
+                    <div 
+                      className="py-3 border-b border-gray-100 font-medium text-primary-700 hover:text-primary-600 transition-colors" 
+                      onClick={onClose}
+                    >
+                      {item.label}
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+              
+              <motion.div
+                custom={menuItems.length}
+                variants={slideInVariants}
+                initial="closed"
+                animate="open"
+                exit="exit"
+              >
+                <Link href="#schedule">
+                  <Button 
+                    className="mt-6 w-full bg-primary-600 hover:bg-primary-700 text-white"
+                    onClick={onClose}
+                  >
+                    Talk to our Experts
+                  </Button>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

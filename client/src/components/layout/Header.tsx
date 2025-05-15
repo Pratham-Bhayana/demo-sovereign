@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import MobileNav from "@/components/ui/MobileNav";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,64 +31,69 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white bg-opacity-95 shadow-sm" : "bg-transparent"
+      isScrolled ? "bg-white bg-opacity-98 shadow-sm backdrop-blur-sm" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <a className="font-heading font-bold text-2xl text-primary">
+          <div className="font-heading font-bold text-2xl text-primary-700">
             Raizing Sovereign
-          </a>
+          </div>
         </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="/">
-            <a className={`font-medium ${
-              location === "/" ? "text-primary" : "text-neutral-800 hover:text-primary"
+            <div className={`font-medium ${
+              location === "/" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               Home
-            </a>
+            </div>
           </Link>
           <Link href="/about">
-            <a className={`font-medium ${
-              location === "/about" ? "text-primary" : "text-neutral-800 hover:text-primary"
+            <div className={`font-medium ${
+              location === "/about" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               About
-            </a>
+            </div>
           </Link>
           <Link href="/programs">
-            <a className={`font-medium ${
-              location === "/programs" ? "text-primary" : "text-neutral-800 hover:text-primary"
+            <div className={`font-medium ${
+              location === "/programs" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               Programs
-            </a>
+            </div>
           </Link>
           <Link href="/calculator">
-            <a className={`font-medium ${
-              location === "/calculator" ? "text-primary" : "text-neutral-800 hover:text-primary"
+            <div className={`font-medium ${
+              location === "/calculator" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               Calculator
-            </a>
+            </div>
           </Link>
-          <a 
-            href="#schedule" 
-            className="ml-4 px-5 py-2 bg-primary text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Talk to our Experts
-          </a>
+          <Link href="#schedule">
+            <Button className="ml-2 bg-primary-600 hover:bg-primary-700 text-white">
+              Talk to our Experts
+            </Button>
+          </Link>
         </nav>
         
         {/* Mobile Menu Button */}
-        <button 
-          onClick={toggleMenu}
-          className="md:hidden flex items-center text-neutral-800"
-          aria-label="Toggle mobile menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
+        <AnimatePresence>
+          <motion.button 
+            onClick={toggleMenu}
+            className="md:hidden flex items-center text-primary-700 p-2"
+            aria-label="Toggle mobile menu"
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+            </svg>
+          </motion.button>
+        </AnimatePresence>
       </div>
       
       {/* Mobile Navigation Menu */}
