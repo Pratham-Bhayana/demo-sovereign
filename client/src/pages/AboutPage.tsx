@@ -65,7 +65,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-secondary py-24 md:py-32">
+      <section className="relative bg-[#183B4E] from-primary to-secondary py-24 md:py-32">
         <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80')" }}></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.h1 
@@ -154,8 +154,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <ScrollAnimation>
-              <div className="bg-primary bg-opacity-5 rounded-xl p-8">
-                <div className="w-14 h-14 bg-primary-light bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-6">
+              <div className="bg-[#183B4E] bg-opacity-5 rounded-xl p-8">
+                <div className="w-14 h-14 bg-[##183B4E]-light bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-6">
                   <i className="fas fa-eye text-2xl"></i>
                 </div>
                 <h3 className="font-heading font-bold text-2xl text-neutral-800 mb-4">Our Vision</h3>
@@ -166,7 +166,7 @@ export default function AboutPage() {
             </ScrollAnimation>
             
             <ScrollAnimation delay={0.2}>
-              <div className="bg-primary bg-opacity-5 rounded-xl p-8">
+              <div className="bg-[#183B4E] bg-opacity-5 rounded-xl p-8">
                 <div className="w-14 h-14 bg-primary-light bg-opacity-20 rounded-full flex items-center justify-center text-primary mb-6">
                   <i className="fas fa-bullseye text-2xl"></i>
                 </div>
@@ -256,7 +256,7 @@ export default function AboutPage() {
       </section>
 
       {/* Brochure */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-16 bg-[#183B4E] from-primary to-secondary text-white">
         <div className="container mx-auto px-6 text-center">
           <ScrollAnimation>
             <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6">

@@ -36,7 +36,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <div className="font-heading font-bold text-2xl text-primary-700">
+          <div className="font-heading font-bold text-2xl  text-[#DDA853] ">
             Raizing Sovereign
           </div>
         </Link>
@@ -45,28 +45,28 @@ export function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="/">
             <div className={`font-medium ${
-              location === "/" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
+              location === "/" ? "text-WHITE" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               Home
             </div>
           </Link>
           <Link href="/about">
             <div className={`font-medium ${
-              location === "/about" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
+              location === "/about" ? "textblack" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               About
             </div>
           </Link>
           <Link href="/programs">
             <div className={`font-medium ${
-              location === "/programs" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
+              location === "/programs" ? "text-black" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               Programs
             </div>
           </Link>
           <Link href="/calculator">
             <div className={`font-medium ${
-              location === "/calculator" ? "text-primary-700" : "text-neutral-700 hover:text-primary-700"
+              location === "/calculator" ? "text-pblack" : "text-neutral-700 hover:text-primary-700"
             } transition-colors`}>
               Calculator
             </div>
