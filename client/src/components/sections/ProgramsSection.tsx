@@ -30,21 +30,21 @@ const programs = [
 
 export default function ProgramsSection() {
   return (
-    <section id="programs" className="py-20 md:py-32 bg-gradient-to-b from-background to-white">
+    <section id="programs" className="py-20 md:py-32 bg-[#ffff] from-background to-white">
       <div className="container mx-auto px-6">
         <ScrollAnimation>
           <div className="mb-20 relative z-10">
             <div className="w-24 h-2 bg-gradient-primary rounded-full mb-5 mx-auto md:mx-0"></div>
-            <h2 className="font-heading font-bold text-4xl md:text-5xl text-primary-800 mb-6 text-center md:text-left">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-gradient-primary text-primary-800 mb-6 text-center md:text-left">
               Global <span className="bg-clip-text text-transparent bg-gradient-primary">Mobility</span> Programs
             </h2>
-            <p className="max-w-2xl md:ml-0 mx-auto text-neutral-600 text-center md:text-left text-lg">
+            <p className="max-w-2xl md:ml-0 mx-auto text-neutral-600 text-center md:text-left text-lg text-black">
               Discover curated citizenship and residency investment programs, designed to provide security, mobility, and opportunity for global citizens.
             </p>
           </div>
         </ScrollAnimation>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  md:gap-10 mb-16">
           {programs.map((program, index) => (
             <ScrollAnimation key={program.id} delay={index * 0.15}>
               <motion.div
@@ -63,9 +63,9 @@ export default function ProgramsSection() {
         </div>
         
         <ScrollAnimation delay={0.3}>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <Link href="/programs">
-              <Button className="btn-glow text-lg font-medium rounded-full gradient-primary text-white px-8 py-6 shadow-xl transition-all hover:shadow-2xl">
+              <Button className="btn-glow text-lg font-medium rounded-full bg-[#DDA853] text-white px-8 py-6 shadow-xl transition-all hover:shadow-2xl">
                 Explore All Programs
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

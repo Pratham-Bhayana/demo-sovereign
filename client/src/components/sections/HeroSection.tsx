@@ -2,15 +2,17 @@ import { motion } from "framer-motion";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import bgImage from "./bg.jpg"; // Adjust path if needed
+
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#183B4E] from-primary-500 via-primary-700 to-primary-900 min-h-[90vh] flex items-center pt-16 pb-24 overflow-hidden" id="hero">
+    <section className="relative bg-[#183B4E] from-primary-500 bg-cover bg-center via-primary-700 to-primary-900 min-h-[90vh] flex items-center pt-16 pb-24 overflow-hidden" id="hero">
       {/* Advanced background effect with gradient mesh */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-primary-700/20 to-secondary/30 z-0" 
         style={{ 
-         
+             backgroundImage: `url(${bgImage})`,
         }}
         aria-hidden="true"
       ></div>
@@ -121,7 +123,7 @@ export default function HeroSection() {
                 {/* Main image with shadow and gradient border */}
                 <div className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-secondary/30 to-primary/30 p-1">
                   <img 
-                    src="https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    src={bgImage}  
                     alt="Global Citizenship and Mobility" 
                     className="responsive w-full h-auto object-cover rounded-xl"
                     loading="eager"

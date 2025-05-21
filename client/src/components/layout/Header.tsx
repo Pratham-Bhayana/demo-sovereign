@@ -72,7 +72,7 @@ export function Header() {
             </div>
           </Link>
           <Link href="#schedule">
-            <Button className="ml-2 bg-primary-600 hover:bg-primary-700 text-white">
+            <Button className="ml-2 bg-[#DDA853] hover:bg-primary-700 text-white">
               Talk to our Experts
             </Button>
           </Link>

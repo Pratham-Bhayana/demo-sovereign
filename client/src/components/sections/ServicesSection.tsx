@@ -63,7 +63,7 @@ export default function ServicesSection() {
           </div>
         </ScrollAnimation>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ScrollAnimation key={service.id} delay={index * 0.1}>
               <ServiceCard

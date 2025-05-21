@@ -16,7 +16,7 @@ export default function ProgramCard({ title, description, countries, image }: Pr
       transition={{ duration: 0.3 }}
     >
       {/* Image with loading optimization */}
-      <div className="h-48 relative overflow-hidden">
+      <div className="h-48 relative  bg-[#0D4715] overflow-hidden">
         <img 
           src={image} 
           alt={title}
@@ -34,16 +34,16 @@ export default function ProgramCard({ title, description, countries, image }: Pr
         </div>
       </div>
       
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="font-heading font-semibold text-xl text-primary-800 mb-3">{title}</h3>
-        <p className="text-neutral-600 mb-4">
+      <div className="p-6 flex flex-col bg-[#27548A] text-white flex-grow">
+        <h3 className="font-heading font-semibold text-xl text-white-800 mb-3">{title}</h3>
+        <p className="text-white-600 mb-4">
           {description}
         </p>
         
         <div className="mt-auto">
           <div className="border-t border-gray-100 pt-4 mb-4">
-            <h4 className="text-sm font-medium text-neutral-700 mb-2">Key Benefits:</h4>
-            <ul className="mb-5 space-y-1 text-neutral-700 text-sm">
+            <h4 className="text-sm font-medium text-white-700 mb-2">Key Benefits:</h4>
+            <ul className="mb-5 space-y-1 text-white-700 text-sm">
               {countries.map((country, index) => (
                 <li key={index} className="flex items-center">
                   <svg className="w-4 h-4 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@ export default function ProgramCard({ title, description, countries, image }: Pr
             </ul>
           </div>
           
-          <Button variant="link" className="text-primary-600 p-0 h-auto font-medium hover:text-primary-800">
+          <Button variant="link" className="text-[#DDA853] p-0 h-auto font-medium hover:text-primary-800">
             Learn More 
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
