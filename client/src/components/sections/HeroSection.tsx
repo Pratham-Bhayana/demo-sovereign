@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-primary-500 via-primary-700 to-primary-900 min-h-[90vh] flex items-center pt-16 pb-24 overflow-hidden" id="hero">
+    <section className="relative bg-[#183B4E] from-primary-500 via-primary-700 to-primary-900 min-h-[90vh] flex items-center pt-16 pb-24 overflow-hidden" id="hero">
       {/* Advanced background effect with gradient mesh */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-primary-700/20 to-secondary/30 z-0" 
@@ -26,7 +26,7 @@ export default function HeroSection() {
             <ScrollAnimation>
               <div className="text-white">
                 <motion.div
-                  className="inline-block mb-4 bg-gradient-to-r from-accent to-accent-600 text-primary-900 rounded-full px-5 py-2 text-sm font-medium shadow-lg"
+                  className="inline-block mb-4 bg-[#DDA853] from-accent to-accent-600 text-primary-900 rounded-full px-5 py-2 text-sm font-medium shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
@@ -41,7 +41,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.6 }}
                 >
                   <span className="block">Elevate Your</span>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-300 to-accent-500">Global Freedom</span>
+                  <span className="bg-clip-text text-[#DDA853] bg-gradient-to-r from-accent-300 to-accent-500">Global Freedom</span>
                 </motion.h1>
                 
                 <motion.p 
@@ -60,7 +60,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
                   <Link href="/programs">
-                    <Button size="lg" className="btn-glow rounded-full bg-gradient-to-r from-accent to-accent-600 hover:from-accent-600 hover:to-accent text-primary-900 font-medium text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all">
+                    <Button size="lg" className="btn-glow rounded-full bg-[#DDA853] from-accent to-accent-600 hover:from-accent-600 hover:to-accent text-primary-900 font-medium text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all">
                       Explore Programs
                       <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
