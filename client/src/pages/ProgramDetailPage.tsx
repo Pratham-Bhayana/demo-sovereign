@@ -229,14 +229,14 @@ export default function ProgramDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen mt-14 bg-gray-50">
       <header />
       
       {/* Mobile-First Hero */}
       <section className="bg-[#183B4E] py-6">
         <div className="max-w-4xl mx-auto px-4">
-          <Link href="/">
-            <Button variant="ghost" className="text-white hover:text-accent mb-3 text-sm">
+          <Link href="/Programs">
+            <Button variant="ghost" className="text-white  mb-3 text-sm">
               <ArrowLeft className="h-4 w-4 mr-1" />
               Back
             </Button>
@@ -252,10 +252,10 @@ export default function ProgramDetailPage() {
               )}
             </div>
             
-            <p className="text-gray-200 text-sm">{program.description}</p>
+            <p className="text-gray-200  text-sm">{program.description}</p>
             
             {/* Mobile Stats Grid */}
-            <div className="bg-white/10 backdrop-blur rounded-lg p-4">
+            <div className="bg-white/10 mt-12 backdrop-blur rounded-lg p-4">
               <div className="grid grid-cols-2 gap-3 text-center">
                 <div>
                   <DollarSign className="h-5 w-5 text-accent mx-auto mb-1" />
@@ -575,41 +575,10 @@ export default function ProgramDetailPage() {
       </section>
 
       {/* Desktop Contact Section */}
-      <div className="hidden md:block">
-        <section className="py-8 bg-[#183B4E]">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <div className="text-white space-y-4">
-              <h3 className="text-xl font-bold">Ready to Start?</h3>
-              <div className="flex justify-center gap-4">
-                <Button 
-                  onClick={() => setShowConsultationModal(true)}
-                  className="bg-accent text-primary hover:bg-accent/90"
-                >
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Free Consultation
-                </Button>
-                <Button 
-                  onClick={() => setShowApplicationModal(true)}
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-primary"
-                >
-                  <Send className="mr-2 h-4 w-4" />
-                  Start Application
-                </Button>
-              </div>
-              <div className="text-sm opacity-90">
-                <Phone className="h-4 w-4 inline mr-1" />
-                +1 (555) 123-4567 | 
-                <Mail className="h-4 w-4 inline mx-1" />
-                info@globalcitizen.com
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      {/*  */}
 
       {/* Add bottom padding for mobile fixed bar */}
-      <div className="md:hidden h-20"></div>
+      <div className="md:hidden h-20 text-white"></div>
 
     
 
@@ -617,13 +586,13 @@ export default function ProgramDetailPage() {
       <Dialog open={showConsultationModal} onOpenChange={setShowConsultationModal}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-primary text-center">
+            <DialogTitle className="text-2xl font-bold text-white text-center">
               Book Free Consultation
             </DialogTitle>
           </DialogHeader>
           
           <form onSubmit={handleConsultationSubmit} className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 text-white gap-4">
               <div>
                 <Label htmlFor="cons-firstName">First Name</Label>
                 <Input
@@ -646,7 +615,7 @@ export default function ProgramDetailPage() {
               </div>
             </div>
             
-            <div>
+            <div className = "text-white">
               <Label htmlFor="cons-email">Email</Label>
               <Input
                 id="cons-email"
@@ -657,7 +626,7 @@ export default function ProgramDetailPage() {
               />
             </div>
             
-            <div>
+            <div className = "text-white">
               <Label htmlFor="cons-phone">Phone Number</Label>
               <Input
                 id="cons-phone"
@@ -673,7 +642,7 @@ export default function ProgramDetailPage() {
               <RadioGroup 
                 value={consultationFormData.consultationType} 
                 onValueChange={(value) => handleConsultationInputChange('consultationType', value)}
-                className="flex gap-4 mt-2"
+                className="flex gap-4 mt-2 text-white"
               >
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="online" id="cons-online" />
@@ -705,13 +674,13 @@ export default function ProgramDetailPage() {
       <Dialog open={showApplicationModal} onOpenChange={setShowApplicationModal}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-primary text-center">
+            <DialogTitle className="text-2xl font-bold text-white text-center">
               Start Application
             </DialogTitle>
           </DialogHeader>
           
           <form onSubmit={handleApplicationSubmit} className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 text-white gap-4">
               <div>
                 <Label htmlFor="app-firstName">First Name</Label>
                 <Input
@@ -734,7 +703,7 @@ export default function ProgramDetailPage() {
               </div>
             </div>
             
-            <div>
+            <div className = "text-white">
               <Label htmlFor="app-email">Email</Label>
               <Input
                 id="app-email"
@@ -745,7 +714,7 @@ export default function ProgramDetailPage() {
               />
             </div>
             
-            <div>
+            <div className = "text-white">
               <Label htmlFor="app-phone">Phone Number</Label>
               <Input
                 id="app-phone"
