@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import AIAssistant from "@/components/AIAssistant"; 
+import ProgramDetailPage from "@/pages/ProgramDetailPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" component={AboutPage} />
           <Route path="/programs" component={ProgramsPage} />
           <Route path="/calculator" component={CalculatorPage} />
+            <Route path="/program/:id" component={ProgramDetailPage} />
           <Route component={NotFound} />
         </Switch>
       </main>

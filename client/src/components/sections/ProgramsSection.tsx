@@ -44,7 +44,7 @@ export default function ProgramsSection() {
           </div>
         </ScrollAnimation>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  md:gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-16">
           {programs.map((program, index) => (
             <ScrollAnimation key={program.id} delay={index * 0.15}>
               <motion.div
@@ -56,6 +56,7 @@ export default function ProgramsSection() {
                   description={program.description}
                   countries={program.countries}
                   image={program.image}
+                  programId={program.id} // Added programId prop
                 />
               </motion.div>
             </ScrollAnimation>
@@ -63,7 +64,7 @@ export default function ProgramsSection() {
         </div>
         
         <ScrollAnimation delay={0.3}>
-          <div className="flex justify-center ">
+          <div className="flex justify-center">
             <Link href="/programs">
               <Button className="btn-glow text-lg font-medium rounded-full bg-[#DDA853] text-white px-8 py-6 shadow-xl transition-all hover:shadow-2xl">
                 Explore All Programs
