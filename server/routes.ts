@@ -1,14 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { insertConsultationSchema, insertContactSchema, insertApplicationSchema } from "@shared/schema";
 import { z } from "zod";
-import { 
-  insertContactSubmissionSchema,
-  insertConsultationSchema,
-  insertNewsletterSchema,
-  insertBrochureRequestSchema,
-  insertCalculatorQuerySchema
-} from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // API routes for contact form submissions
@@ -60,7 +54,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // API routes for newsletter subscription
   app.post("/api/newsletter", async (req, res) => {
     try {
-      const validatedData = insertNewsletterSchema.parse(req.body);
+      const {validatedData} = insertNewsletterSchema.parse(req.body);
       
       // Check if email already exists
       const existingSubscription = await storage.getNewsletterByEmail(validatedData.email);

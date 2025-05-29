@@ -198,100 +198,67 @@ var MemStorage = class {
 };
 var storage = new MemStorage();
 
-// server/routes.ts
-import { z } from "zod";
-
 // shared/schema.ts
-import { pgTable, text, serial, timestamp, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 var users = pgTable("users", {
   id: serial("id").primaryKey(),
   username: text("username").notNull().unique(),
-  password: text("password").notNull(),
-  role: text("role").notNull().default("user"),
-  createdAt: timestamp("created_at").defaultNow()
-});
-var insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
-  role: true
-});
-var contactSubmissions = pgTable("contact_submissions", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
-  phone: text("phone"),
-  subject: text("subject").notNull(),
-  message: text("message").notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
-  processed: boolean("processed").default(false)
-});
-var insertContactSubmissionSchema = createInsertSchema(contactSubmissions).pick({
-  name: true,
-  email: true,
-  phone: true,
-  subject: true,
-  message: true
+  password: text("password").notNull()
 });
 var consultations = pgTable("consultations", {
   id: serial("id").primaryKey(),
-  name: text("name").notNull(),
+  firstName: text("first_name").notNull(),
+  lastName: text("last_name").notNull(),
   email: text("email").notNull(),
   phone: text("phone").notNull(),
-  date: text("date").notNull(),
-  time: text("time").notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
-  confirmed: boolean("confirmed").default(false),
-  completed: boolean("completed").default(false)
+  preferredProgram: text("preferred_program"),
+  consultationType: text("consultation_type").notNull().default("online"),
+  status: text("status").notNull().default("pending"),
+  createdAt: timestamp("created_at").notNull().defaultNow()
 });
-var insertConsultationSchema = createInsertSchema(consultations).pick({
-  name: true,
-  email: true,
-  phone: true,
-  date: true,
-  time: true
-});
-var newsletters = pgTable("newsletters", {
-  id: serial("id").primaryKey(),
-  email: text("email").notNull().unique(),
-  active: boolean("active").default(true),
-  createdAt: timestamp("created_at").defaultNow()
-});
-var insertNewsletterSchema = createInsertSchema(newsletters).pick({
-  email: true
-});
-var brochureRequests = pgTable("brochure_requests", {
+var contacts = pgTable("contacts", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  company: text("company"),
-  country: text("country").notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
-  fulfilled: boolean("fulfilled").default(false)
+  subject: text("subject").notNull(),
+  message: text("message").notNull(),
+  status: text("status").notNull().default("unread"),
+  createdAt: timestamp("created_at").notNull().defaultNow()
 });
-var insertBrochureRequestSchema = createInsertSchema(brochureRequests).pick({
-  name: true,
-  email: true,
-  company: true,
-  country: true
-});
-var calculatorQueries = pgTable("calculator_queries", {
+var applications = pgTable("applications", {
   id: serial("id").primaryKey(),
-  region: text("region").notNull(),
-  programType: text("program_type").notNull(),
-  investmentType: text("investment_type").notNull(),
-  budget: text("budget").notNull(),
-  createdAt: timestamp("created_at").defaultNow(),
-  convertedToConsultation: boolean("converted_to_consultation").default(false)
+  firstName: text("first_name").notNull(),
+  lastName: text("last_name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone").notNull(),
+  programId: text("program_id").notNull(),
+  documentsReady: boolean("documents_ready").notNull().default(false),
+  status: text("status").notNull().default("draft"),
+  createdAt: timestamp("created_at").notNull().defaultNow()
 });
-var insertCalculatorQuerySchema = createInsertSchema(calculatorQueries).pick({
-  region: true,
-  programType: true,
-  investmentType: true,
-  budget: true
+var insertUserSchema = createInsertSchema(users).pick({
+  username: true,
+  password: true
+});
+var insertConsultationSchema = createInsertSchema(consultations).omit({
+  id: true,
+  status: true,
+  createdAt: true
+});
+var insertContactSchema = createInsertSchema(contacts).omit({
+  id: true,
+  status: true,
+  createdAt: true
+});
+var insertApplicationSchema = createInsertSchema(applications).omit({
+  id: true,
+  status: true,
+  createdAt: true
 });
 
 // server/routes.ts
+import { z } from "zod";
 async function registerRoutes(app2) {
   app2.post("/api/contact", async (req, res) => {
     try {
@@ -335,7 +302,7 @@ async function registerRoutes(app2) {
   });
   app2.post("/api/newsletter", async (req, res) => {
     try {
-      const validatedData = insertNewsletterSchema.parse(req.body);
+      const { validatedData } = insertNewsletterSchema.parse(req.body);
       const existingSubscription = await storage.getNewsletterByEmail(validatedData.email);
       if (existingSubscription) {
         if (existingSubscription.active) {
