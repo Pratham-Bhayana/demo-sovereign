@@ -36,7 +36,7 @@ export default function ProgramsSection() {
           <div className="mb-20 relative z-10">
             <div className="w-24 h-2 bg-gradient-primary rounded-full mb-5 mx-auto md:mx-0"></div>
             <h2 className="font-heading font-bold text-4xl md:text-5xl text-gradient-primary text-primary-800 mb-6 text-center md:text-left">
-              Global <span className="bg-clip-text text-transparent bg-gradient-primary">Mobility</span> Programs
+              Global Mobility Programs
             </h2>
             <p className="max-w-2xl md:ml-0 mx-auto text-neutral-600 text-center md:text-left text-lg text-black">
               Discover curated citizenship and residency investment programs, designed to provide security, mobility, and opportunity for global citizens.
