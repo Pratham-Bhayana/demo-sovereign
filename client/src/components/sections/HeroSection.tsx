@@ -3,16 +3,17 @@ import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import bgImage from "./bg.jpg"; // Adjust path if needed
+import bgiImage from "./bg2.png"
 
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#183B4E] from-primary-500 bg-cover bg-center via-primary-700 to-primary-900 min-h-[90vh] flex items-center pt-16 pb-24 overflow-hidden" id="hero">
+    <section className="relative bg-[#183B4E] bg-no-repeat from-primary-500 bg-cover bg-center via-primary-700 to-primary-900 min-h-[90vh] flex items-center pt-16 pb-24 overflow-hidden" id="hero">
       {/* Advanced background effect with gradient mesh */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-primary-700/20 to-secondary/30 z-0" 
+        className="absolute bg-no-repeat bg-cover inset-0 bg-gradient-to-br from-primary-700/20 to-secondary/30 z-0" 
         style={{ 
-             backgroundImage: `url(${bgImage})`,
+             backgroundImage: `url(${bgiImage})`,
         }}
         aria-hidden="true"
       ></div>
