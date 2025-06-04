@@ -13,7 +13,7 @@ export default function HeroSection() {
       <div 
         className="absolute bg-no-repeat bg-cover inset-0 bg-gradient-to-br from-primary-700/20 to-secondary/30 z-0" 
         style={{ 
-             backgroundImage: `url(${bgiImage})`,
+             backgroundImage: `url(${bgImage})`,
         }}
         aria-hidden="true"
       ></div>

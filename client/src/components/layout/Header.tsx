@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import MobileNav from "@/components/ui/MobileNav";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "./logo.png"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +38,11 @@ export function Header() {
         {/* Logo */}
         <Link href="/">
           <div className="font-heading font-bold text-2xl  text-[#DDA853] ">
-            Raizing Sovereign
+            <img
+      src={Logo} // Use Logo if imported: src={Logo}
+      alt="Raizing Sovereign Logo"
+      className="h-10 w-auto" // Adjust size as needed
+    />
           </div>
         </Link>
         
